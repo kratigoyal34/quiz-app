@@ -69,6 +69,7 @@ const getAnswer = () => {
     return answer;
 }
 
+
 const reset = () => {
     optionInputs.forEach(
         (input) => {
@@ -79,7 +80,7 @@ const reset = () => {
 
 const endQuiz = () => {
     document.getElementById("box").innerHTML = `
-    <h3>Thank you for laying the quiz.</h3>
+    <h3>Thankyou for playing the quiz.</h3>
     <h2>${right} / ${total} are correct</h2>
     `
 }
