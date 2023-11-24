@@ -22,13 +22,13 @@ const questions = [
         'c': 'jason object Notation',
         'd': 'Helicoptres Terminals Motorboats Lamborginis',
         'correct': 'b'
-    }
+    },
 ]
 
 let index = 0;
 let total = questions.length;
 let right = 0, wrong = 0;
-const quesBox = document.getElementById('quesBox');
+const quesBox = document.getElementById("quesBox");
 const optionInputs = document.querySelectorAll('.options');
 const loadQuestion = () => {
     if(index === total){
@@ -44,8 +44,8 @@ const loadQuestion = () => {
 }
 
 const submitQuiz = () => {
-    const data = questions[index];
-    const ans = getAnswer();
+    const data = questions[index]
+    const ans = getAnswer()
     console.log(ans, data.correct);
     if (ans === data.correct){
         right++;
@@ -54,15 +54,15 @@ const submitQuiz = () => {
     }
     index++;
     loadQuestion();
-    return;
+    return
 }
 
 const getAnswer = () => {
     let answer;
     optionInputs.forEach(
         (input) => {
-            if (input.checked) {
-                answer = input.Value;
+            if(input.checked) {
+                answer = input.value;
             }
         }
     )
@@ -80,7 +80,7 @@ const reset = () => {
 const endQuiz = () => {
     document.getElementById("box").innerHTML = `
     <h3>Thank you for laying the quiz.</h3>
-    <h2>${right} / ${total} are correct </h2>
+    <h2>${right} / ${total} are correct</h2>
     `
 }
 
